@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Samuel Olurin Portfolio</title>
+
+<link rel="icon" href="image.png">
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<header>
+<div class="logo">
+
+<div class="logo-icon">SO</div>
+
+<span class="logo-text">Samuel</span>
+
+</div>
+
+<nav id="nav">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#github">GitHub</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section id="home" class="home">
+
+<h2>I am a <span class="typing"></span></h2>
+
+<h1>Samuel Olurin</h1>
+
+<p>Frontend Developer passionate about building modern websites.</p>
+
+<a href="#contact" class="btn hire-btn">Hire Now</a>
+
+</section>
+
+<section id="about" class="about">
+
+<div class="about-container">
+
+<div class="about-text">
+
+<h2>About Me</h2>
+
+<p>
+Hello! I'm Samuel Olurin, a passionate frontend developer who enjoys creating modern, responsive, and user-friendly websites.
+</p>
+
+<p>
+I specialize in building beautiful interfaces using HTML, CSS, and JavaScript. I focus on writing clean code and building websites that look great on both desktop and mobile devices.
+</p>
+
+<p>
+I enjoy learning new technologies, improving my coding skills, and working on projects that challenge my creativity and problem-solving ability.
+</p>
+
+</div>
+
+<div class="about-image">
+
+<img src="https://picsum.photos/400/400" alt="profile">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills" class="skills">
+
+<h2>Skills</h2>
+
+<div class="skill">
+<p>HTML</p>
+<div class="skill-bar"><span data-width="95%"></span></div>
+</div>
+
+<div class="skill">
+<p>CSS</p>
+<div class="skill-bar"><span data-width="90%"></span></div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="skill-bar"><span data-width="80%"></span></div>
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="stat">
+<h2 class="counter" data-target="25">0</h2>
+<p>Projects</p>
+</div>
+
+<div class="stat">
+<h2 class="counter" data-target="12">0</h2>
+<p>Clients</p>
+</div>
+
+<div class="stat">
+<h2 class="counter" data-target="3">0</h2>
+<p>Years Experience</p>
+</div>
+
+</section>
+
+<section id="portfolio" class="portfolio">
+
+<h2>My Projects</h2>
+
+<div class="portfolio-grid">
+
+<div class="project-card">
+
+<img src="https://picsum.photos/400/300?1">
+
+<div class="project-info">
+<h3>Business Website</h3>
+<p>Responsive business landing page</p>
+<button onclick="openProject('https://example.com')">Preview</button>
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://picsum.photos/400/300?2">
+
+<div class="project-info">
+<h3>Ecommerce UI</h3>
+<p>Modern online store interface</p>
+<button onclick="openProject('https://example.com')">Preview</button>
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://picsum.photos/400/300?3">
+
+<div class="project-info">
+<h3>Portfolio Website</h3>
+<p>Personal portfolio design</p>
+<button onclick="openProject('https://example.com')">Preview</button>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="github" class="github">
+
+<h2>GitHub Projects</h2>
+
+<div id="github-projects" class="github-grid"></div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Contact Me</h2>
+
+<form action="https://formspree.io/f/xqeypoar" method="POST" class="contact-form">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</section>
+
+<div id="projectModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close">×</span>
+
+<iframe id="projectFrame"></iframe>
+
+</div>
+
+</div>
+
+<!-- AI CHAT BUTTON -->
+<div class="ai-button" onclick="toggleChat()">🤖</div>
+
+<!-- CHAT BOX -->
+<div class="chat-container" id="chatBox">
+
+<div class="chat-header">Samuel AI Assistant</div>
+
+<div class="chat-messages" id="chatMessages"></div>
+
+<div class="chat-input">
+
+<input type="text" id="userInput" placeholder="Ask about Samuel..." onkeydown="if(event.key==='Enter') sendMessage()">
+
+<button onclick="sendMessage()">Send</button>
+
+<button onclick="startVoice()">🎤</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
