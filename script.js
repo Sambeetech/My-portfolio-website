@@ -223,7 +223,11 @@ sendMessage()
 // VOICE CHAT (MICROPHONE)
 // ===============================
 
-function startVoice(){
+// ===============================
+// VOICE CHAT (MICROPHONE)
+// ===============================
+
+function startVoice() {
 
 const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)()
 
@@ -231,7 +235,7 @@ recognition.lang = "en-US"
 
 recognition.start()
 
-recognition.onresult = function(event){
+recognition.onresult = function(event) {
 
 const voiceText = event.results[0][0].transcript
 
@@ -240,5 +244,38 @@ document.getElementById("userInput").value = voiceText
 sendMessage()
 
 }
+
+}
+
+
+// ===============================
+// WELCOME MESSAGE WHEN CHAT OPENS
+// ===============================
+
+window.onload = () => {
+
+setTimeout(() => {
+
+const messages = document.getElementById("chatMessages")
+
+messages.innerHTML += `
+<div class="ai-message">
+👋 Hello and welcome!
+
+I’m the AI assistant for Samuel Olurin’s portfolio.
+
+You can ask me:
+• What skills does he have?  
+• Show me his projects  
+• How can I hire him?  
+• Send me his CV  
+
+Just type your question below 😊
+</div>
+`
+
+messages.scrollTop = messages.scrollHeight
+
+}, 1500)
 
 }
